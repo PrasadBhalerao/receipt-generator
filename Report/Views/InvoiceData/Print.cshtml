@@ -1,0 +1,82 @@
+﻿@model Report.Models.ReceiptData
+
+@{
+    ViewBag.Title = "Print";
+}
+
+<h2>Print View</h2>
+<button onclick="window.print()" class="success">Print</button>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div style="border: 1px solid red; border-radius: 6px; width: 500px; height: 600px;">
+            <div class="row">
+                <center><b>Shri Warkari Shikshan Sanstha</b></center>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-md-offset-1 col-md-5">
+                    <label>Name: @Model.Name</label>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <label>Phone: @Model.MobileNo</label>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-md-offset-1 col-md-5">
+                    <label>Address: @Model.Village, @Model.City, @Model.State</label>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <label>ReceiptNo: @Model.Id</label>
+                </div>
+            </div>
+
+            <hr />
+            <table class="table" style="height:300px;padding:20px;">
+                <thead>
+                    <tr>
+                        <th>Donation type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Type 1</td>
+                        <td>124</td>
+                    </tr>
+                    <tr>
+                        <td>Type 1</td>
+                        <td>124</td>
+                    </tr>
+                    <tr>
+                        <td>Type 1</td>
+                        <td>124</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>123</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div style="padding-top:20px;float:right; padding-right:15px;">
+                <label>Signature</label>
+            </div>
+
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
