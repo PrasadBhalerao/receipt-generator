@@ -13,9 +13,9 @@ namespace Report.Models
         public int KeyId { get; set; }
         public string Name { get; set; }
 
-        [ForeignKey("DonationTypeID")]
-        public DonationType DonationType { get; set; }
-        public int DonationTypeID { get; set; }
+        //[ForeignKey("DonationTypeID")]
+        //public DonationType DonationType { get; set; }
+        //public int DonationTypeID { get; set; }
         public string Village { get; set; }
         public string City { get; set; }
         public string State { get; set; }

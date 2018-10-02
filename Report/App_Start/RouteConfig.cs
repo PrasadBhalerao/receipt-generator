@@ -16,7 +16,7 @@ namespace Report
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "ReceiptData", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "InvoiceData", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

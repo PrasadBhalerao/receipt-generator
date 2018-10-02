@@ -9,7 +9,7 @@ namespace Report.Models
 {
     public class ReportDBContext : DbContext
     {
-        public ReportDBContext() : base("name=DatabaseConnString")
+        public ReportDBContext() : base("DatabaseConnString")
         {
         }
         public DbSet<ReceiptData> ReceiptData { get; set; }

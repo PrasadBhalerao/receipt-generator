@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Report.Models.ReceiptData>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Receipts";
 }
 
 <h2>Index</h2>
@@ -65,10 +65,10 @@
             @Html.DisplayFor(modelItem => item.Amount)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
-            @Html.ActionLink("Print", "Print", new { id = item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.KeyId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.KeyId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.KeyId }) |
+            @Html.ActionLink("Print", "Print", new { id = item.KeyId })
         </td>
     </tr>
 }

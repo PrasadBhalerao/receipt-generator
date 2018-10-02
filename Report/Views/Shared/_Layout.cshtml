@@ -11,13 +11,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("Report", "Index", "ReceiptData", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("ReceiptData", "Index", "ReceiptData")</li>
-                    <li>@Html.ActionLink("Home", "Contact", "Home")</li>
-                </ul>
+                @Html.ActionLink("Receiptor", "Index", "InvoiceData", new { area = "" }, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
@@ -25,7 +19,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Report Application</p>
+            <p>&copy; @DateTime.Now.Year - Receiptor (Create and print receipts)</p>
         </footer>
     </div>
 
